@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Playground from "../components/Playground/playground";
 
 interface PageProps {}
 
@@ -24,5 +25,10 @@ export async function generateMetadata({}: PageProps): Promise<Metadata> {
 }
 
 export default async function Home({}: PageProps) {
-  return <div data-testid='home-page'> TEMPLATE - HOME </div>;
+  return (
+    <div data-testid="home-page">
+      TEMPLATE - HOME
+      <Playground />
+    </div>
+  );
 }
