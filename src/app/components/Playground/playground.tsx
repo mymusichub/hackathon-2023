@@ -21,8 +21,7 @@ const Playground = () => {
 
     const data = await response.json();
     setIsLoading(false);
-    console.log(data.text);
-    setResponse(data.text);
+    console.log(data);
   };
 
   return <button onClick={() => getResponseFromOpenAI()}>Click me!</button>;
