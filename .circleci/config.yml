@@ -1,0 +1,242 @@
+version: 2.1
+working_directory: &working_directory /tmp/workspace
+service_name: &service_name PROJECT_NAME
+project_id_staging: &project_id_staging musichub-staging-278316
+project_id_acceptance: &project_id_acceptance musichub-acceptance
+project_id_production: &project_id_production musichub-production-278316
+gcp_compute_zone: &gcp_compute_zone europe-west1-a
+gcp_gcr: &gcp_gcr eu.gcr.io
+machine:
+  timezone: Europe/Berlin
+orbs:
+  node: circleci/node@5.0.2
+  cypress: cypress-io/cypress@3.1.3
+  gcp-gcr: circleci/gcp-gcr@0.15.0
+  gcp-cli: circleci/gcp-cli@2.4.1
+  terraform: circleci/terraform@3.2.0
+executors:
+  node-18:
+    resource_class: medium+
+    docker:
+      - image: cimg/node:18.16.0
+
+jobs:
+  build-and-test:
+    executor: node-18
+    working_directory: *working_directory
+    steps:
+      - checkout
+      - attach_workspace:
+          at: *working_directory
+      - restore_cache:
+          keys:
+            - node-dependencies-{{ checksum "package-lock.json" }}-{{ arch }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run test:ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: node-dependencies-{{ checksum "package-lock.json" }}-{{ arch }}
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - .next
+            - Dockerfile
+            - terraform
+
+  notify-sentry-deploy: &notify-sentry-deploy
+    executor: gcp-cli/google
+    steps:
+      - checkout
+      - attach_workspace:
+          at: *working_directory
+      - run:
+          name: Create release and notify Sentry of deploy
+          command: |
+            curl -sL https://sentry.io/get-cli/ | bash
+            export SENTRY_RELEASE=$(sentry-cli releases propose-version)
+            sentry-cli releases new -p $SENTRY_PROJECT $SENTRY_RELEASE
+            sentry-cli releases set-commits $SENTRY_RELEASE --auto --ignore-missing
+            sentry-cli releases finalize $SENTRY_RELEASE
+            sentry-cli releases deploys $SENTRY_RELEASE new -e $SENTRY_ENVIRONMENT
+
+  push-docker-image: &push-docker-image
+    working_directory: *working_directory
+    executor: gcp-gcr/default
+    steps:
+      - attach_workspace:
+          at: *working_directory
+      - gcp-gcr/gcr-auth
+      - gcp-gcr/build-image:
+          image: *service_name
+          registry-url: *gcp_gcr
+          tag: $CIRCLE_SHA1
+      - gcp-gcr/push-image:
+          digest-path: ./digest.txt
+          image: *service_name
+          registry-url: *gcp_gcr
+          tag: $CIRCLE_SHA1
+      - run:
+          command: |
+            echo "Digest is: $(<./digest.txt)"
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./digest.txt
+
+  push-docker-image-staging:
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_staging
+      SERVICE_NAME: *service_name
+      GOOGLE_COMPUTE_ZONE: *gcp_compute_zone
+    <<: *push-docker-image
+
+  push-docker-image-acceptance:
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_acceptance
+      SERVICE_NAME: *service_name
+      GOOGLE_COMPUTE_ZONE: *gcp_compute_zone
+    <<: *push-docker-image
+
+  push-docker-image-production:
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_production
+      SERVICE_NAME: *service_name
+      GOOGLE_COMPUTE_ZONE: *gcp_compute_zone
+    <<: *push-docker-image
+
+  notify-sentry-deploy-acceptance:
+    environment:
+      SENTRY_ENVIRONMENT: acceptance
+      SENTRY_ORG: musichub
+      SENTRY_PROJECT: frontend
+    <<: *notify-sentry-deploy
+
+  notify-sentry-deploy-production:
+    environment:
+      SENTRY_ENVIRONMENT: production
+      SENTRY_ORG: musichub
+      SENTRY_PROJECT: frontend
+    <<: *notify-sentry-deploy
+
+  terraform-apply: &terraform-apply
+    working_directory: *working_directory
+    executor: gcp-cli/google
+    steps:
+      - attach_workspace:
+          at: *working_directory
+      - gcp-cli/initialize
+      - run:
+          name: install wget
+          command: apt-get install wget unzip
+      - terraform/install:
+          terraform_version: 1.2.8
+      - run:
+          name: terraform apply
+          command: |
+            cd terraform
+            gcloud container clusters get-credentials api
+            export GOOGLE_APPLICATION_CREDENTIALS=${HOME}/gcloud-service-key.json
+            terraform init -input=false -backend-config="bucket=${TERRAFORM_STATE_BUCKET}" -backend-config="prefix=PROJECT_NAME"
+            terraform plan -out tfapply \
+            -var "IMAGE_NAME=${GOOGLE_REGISTRY_URL}/${CONTAINER_REGISTRY_PROJECT_ID}/${IMAGE_NAME}:${CIRCLE_SHA1}" \
+            -var "DEPLOYMENT_VERSION=${CIRCLE_SHA1}" \
+            -var-file ${ENVIRONMENT}.tfvars
+            terraform apply -auto-approve tfapply
+
+  deploy-to-acceptance:
+    description: Deploy application to Google Kubernetes Engine using terraform
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_acceptance
+      CONTAINER_REGISTRY_PROJECT_ID: *project_id_acceptance
+      GOOGLE_COMPUTE_REGION: "europe-west3"
+      GOOGLE_REGISTRY_URL: *gcp_gcr
+      IMAGE_NAME: *service_name
+      ENVIRONMENT: "acceptance"
+      TERRAFORM_STATE_BUCKET: "musichub-terraform-state-acceptance"
+    <<: *terraform-apply
+
+  deploy-to-staging:
+    description: Deploy application to Google Kubernetes Engine using terraform
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_staging
+      CONTAINER_REGISTRY_PROJECT_ID: *project_id_staging
+      GOOGLE_COMPUTE_REGION: "europe-west3"
+      GOOGLE_REGISTRY_URL: *gcp_gcr
+      IMAGE_NAME: *service_name
+      ENVIRONMENT: "staging"
+      TERRAFORM_STATE_BUCKET: "musichub-terraform-state-staging"
+    <<: *terraform-apply
+
+  deploy-to-production:
+    description: Deploy application to Google Kubernetes Engine using terraform
+    environment:
+      GOOGLE_PROJECT_ID: *project_id_production
+      CONTAINER_REGISTRY_PROJECT_ID: *project_id_production
+      GOOGLE_COMPUTE_REGION: "europe-west3"
+      GOOGLE_REGISTRY_URL: *gcp_gcr
+      IMAGE_NAME: *service_name
+      ENVIRONMENT: "production"
+      TERRAFORM_STATE_BUCKET: "musichub-terraform-state-production"
+    <<: *terraform-apply
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
+      - cypress/run:
+          cypress-command: npx cypress run --browser chrome
+          install-browsers: true
+          start-command: npm run dev:e2e
+      - hold:
+          name: acceptance-hold
+          type: approval
+          requires:
+            - build-and-test
+      - push-docker-image-acceptance:
+          context: acceptance
+          requires:
+            - acceptance-hold
+      - deploy-to-acceptance:
+          requires:
+            - push-docker-image-acceptance
+          context: acceptance
+      - notify-sentry-deploy-acceptance:
+          requires:
+            - deploy-to-acceptance
+          context: acceptance
+      - push-docker-image-staging:
+          requires:
+            - build-and-test
+          context: staging
+          filters:
+            branches:
+              only: main
+      - deploy-to-staging:
+          requires:
+            - push-docker-image-staging
+          context: staging
+          filters:
+            branches:
+              only: main
+      - hold:
+          name: prod-hold
+          type: approval
+          requires:
+            - deploy-to-staging
+      - push-docker-image-production:
+          requires:
+            - prod-hold
+          context: production
+      - deploy-to-production:
+          requires:
+            - push-docker-image-production
+          context: production
+          filters:
+            branches:
+              only: main
+      - notify-sentry-deploy-production:
+          requires:
+            - deploy-to-production
+          context: production
