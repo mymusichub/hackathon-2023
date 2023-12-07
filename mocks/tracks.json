@@ -1,0 +1,343 @@
+{
+  "tracks": [
+    {
+      "id": "d887983a-8f25-4f09-ac67-706dc22bdeb3",
+      "title": {
+        "title": "ILTHX [ilovetohavesex]",
+        "language": "en",
+        "version": null
+      },
+      "genre1": "0101000000",
+      "genre2": null,
+      "displayArtist": null,
+      "participants": [
+        {
+          "name": "munterfel.",
+          "role": "131",
+          "participantId": "c4bb1b6c-cec0-45eb-aa79-a07467b24433",
+          "position": 1,
+          "appleId": "1577218805",
+          "spotifyId": "0dSkorqvTwqtBTmTzFOqo6",
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "RECORDING"
+        },
+        {
+          "name": "Aline Patschke",
+          "role": "253",
+          "participantId": "ad0b1dee-5cf2-4543-b214-bdfa7f307ed9",
+          "position": 2,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "Ida Wutzler",
+          "role": "100",
+          "participantId": "71bf7b54-427f-431a-bfef-db14c145a4aa",
+          "position": 3,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "Laurenz Bogen",
+          "role": "406",
+          "participantId": "4dc1355f-2e14-43cb-bad8-e59aedde8cf1",
+          "position": 4,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1093614948",
+          "gemaMemberNumber": null,
+          "firstname": "Laurenz",
+          "lastname": "Bogen",
+          "type": "WORK"
+        },
+        {
+          "name": "Laurenz Bogen",
+          "role": "401",
+          "participantId": "4dc1355f-2e14-43cb-bad8-e59aedde8cf1",
+          "position": 5,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1093614948",
+          "gemaMemberNumber": null,
+          "firstname": "Laurenz",
+          "lastname": "Bogen",
+          "type": "WORK"
+        },
+        {
+          "name": "Lina Ida Wutzler",
+          "role": "401",
+          "participantId": "f9095feb-7b80-4348-8364-08c7bfd0ea57",
+          "position": 6,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1096724333",
+          "gemaMemberNumber": null,
+          "firstname": "Lina Ida",
+          "lastname": "Wutzler",
+          "type": "WORK"
+        },
+        {
+          "name": "Leo Zwiebel",
+          "role": "401",
+          "participantId": "e4129d13-3ac6-4e51-97ae-97894f408751",
+          "position": 7,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1104541604",
+          "gemaMemberNumber": null,
+          "firstname": "Leo",
+          "lastname": "Zwiebel",
+          "type": "WORK"
+        },
+        {
+          "name": "Lina Ida Wutzler",
+          "role": "406",
+          "participantId": "f9095feb-7b80-4348-8364-08c7bfd0ea57",
+          "position": 8,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1096724333",
+          "gemaMemberNumber": null,
+          "firstname": "Lina Ida",
+          "lastname": "Wutzler",
+          "type": "WORK"
+        },
+        {
+          "name": "Leo Zwiebel",
+          "role": "406",
+          "participantId": "e4129d13-3ac6-4e51-97ae-97894f408751",
+          "position": 9,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1104541604",
+          "gemaMemberNumber": null,
+          "firstname": "Leo",
+          "lastname": "Zwiebel",
+          "type": "WORK"
+        },
+        {
+          "name": "Aline Patschke",
+          "role": "401",
+          "participantId": "a8403eed-8e17-4aee-9d1e-19ccadb1feeb",
+          "position": 10,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1189329123",
+          "gemaMemberNumber": null,
+          "firstname": "Aline",
+          "lastname": "Patschke",
+          "type": "WORK"
+        },
+        {
+          "name": "Aline Patschke",
+          "role": "406",
+          "participantId": "a8403eed-8e17-4aee-9d1e-19ccadb1feeb",
+          "position": 11,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": "1189329123",
+          "gemaMemberNumber": null,
+          "firstname": "Aline",
+          "lastname": "Patschke",
+          "type": "WORK"
+        }
+      ],
+      "originalReleaseDate": null,
+      "audio": {
+        "fileUri": "https://storage.googleapis.com/musichub-user-assets-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/track_audio_file_27b21b4c-e04b-4964-9c1f-84751d4cbf83.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=630549954002-compute%40developer.gserviceaccount.com%2F20231207%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20231207T144144Z&X-Goog-Expires=7200&X-Goog-SignedHeaders=host&X-Goog-Signature=61ef1aa8e4bea80e9238daeaeb012658e04982ba6c772a17f5e15ba0a291c3259ce1f71073400bd5f065734d756e9bed2a9c85397653e8a80c547034526887929c8e75f7483537fa2286efee51d9ca1d0684a70824acb39344bf761b8267ee7848f72278936fa5acc80ea8e62036cca55a073eba9b8ccfaa8983e72064c1fcd881ee8277fd0155428b17d85302d4ae6a8089f72c89056f16c36486a40cc55e027fc048b1aa88073283da6064981b8a37617d47fecc5a93a964c605b126b6b8e63d27ec0d81d7c688a1924a134b2ea6e7c063c4b3851f39519582f95fb04de88abc98b7a0bcfe97def2ecbef802c850839900db9f6e41330490ff57ae93cc84f6",
+        "storageFileName": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597/track_audio_file_27b21b4c-e04b-4964-9c1f-84751d4cbf83.wav",
+        "originalFileName": "ilthx_master_070423_1946.wav",
+        "fileSizeInBytes": 50185878,
+        "fileHash": "3c693656c4500d5cc567ad24dc60343e",
+        "fileMime": "audio/wav",
+        "durationSeconds": 284,
+        "createdAt": "2023-04-07T17:52:41Z"
+      },
+      "copyright": {
+        "name": null,
+        "year": null
+      },
+      "recordingRight": {
+        "name": "munterfel.",
+        "year": 2023
+      },
+      "originCountry": "DE",
+      "isrc": "DEYX82156520",
+      "language": "en",
+      "instrumental": false,
+      "explicit": true,
+      "liveRecording": false,
+      "trackStatus": "AVAILABLE",
+      "releaseIds": ["14859f0c-4b6d-4a8d-8cb9-caac690415d5"],
+      "updatedAt": "2023-04-12T14:53:29Z",
+      "setNumber": 1,
+      "preListeningStart": 138,
+      "archived": false,
+      "workId": null,
+      "gemaWorkNumber": null,
+      "gemaWorkVersionNumber": null,
+      "userId": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+      "idea": null,
+      "createdAt": "2023-03-27T08:56:37Z"
+    },
+    {
+      "id": "e58cae70-dfd4-4224-9e4c-7dc75393ad21",
+      "title": {
+        "title": "Urlove.",
+        "language": "en",
+        "version": null
+      },
+      "genre1": "0101000000",
+      "genre2": "0102051130",
+      "displayArtist": null,
+      "participants": [
+        {
+          "name": "munterfel.",
+          "role": "131",
+          "participantId": "c4bb1b6c-cec0-45eb-aa79-a07467b24433",
+          "position": 1,
+          "appleId": "1577218805",
+          "spotifyId": "0dSkorqvTwqtBTmTzFOqo6",
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "RECORDING"
+        },
+        {
+          "name": "Leo Zwiebel",
+          "role": "119",
+          "participantId": "8759f183-358a-451b-a934-e4232e5e74ed",
+          "position": 2,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "Aline Patschke",
+          "role": "252",
+          "participantId": "ad0b1dee-5cf2-4543-b214-bdfa7f307ed9",
+          "position": 3,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "Ida Wutzler",
+          "role": "100",
+          "participantId": "71bf7b54-427f-431a-bfef-db14c145a4aa",
+          "position": 4,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "Laurenz Bogen",
+          "role": "275",
+          "participantId": "36257c3b-7b71-47fb-862d-b4d50b629dfb",
+          "position": 5,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "CONTRIBUTOR"
+        },
+        {
+          "name": "munterfel.",
+          "role": "401",
+          "participantId": "bb9dfe48-dc74-4006-bd61-4e25eea332ae",
+          "position": 6,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "WORK"
+        },
+        {
+          "name": "munterfel.",
+          "role": "406",
+          "participantId": "bb9dfe48-dc74-4006-bd61-4e25eea332ae",
+          "position": 7,
+          "appleId": null,
+          "spotifyId": null,
+          "ipiNameNumber": null,
+          "gemaMemberNumber": null,
+          "firstname": null,
+          "lastname": null,
+          "type": "WORK"
+        }
+      ],
+      "originalReleaseDate": null,
+      "audio": {
+        "fileUri": "https://storage.googleapis.com/musichub-user-assets-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/track_audio_file_99eae620-37fd-4d5c-8d59-2b8230283334.wav?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=630549954002-compute%40developer.gserviceaccount.com%2F20231207%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20231207T144144Z&X-Goog-Expires=7200&X-Goog-SignedHeaders=host&X-Goog-Signature=0caa61c0c3390d3e61362933aca592bb55710dee374aecc5852ac74726969c6d69cbf42b5ef10eeb4056611dca1600459944d953ffa4ce0423de829393ea4165ca33eb02d516e31453f8e463de23cb3e48abac15f1d6867e9a0d59626ea2332be1f975146f04ede460c3e6b1c326c5b00a5e7c081ee65194e9b5db65ae7503a782d69e16256dd134e897ba8e4002a42e9e7c71e5dfcc3b2b39a08e924dbeb045cdebf3e9709cf22c86f16bbe32ad9a716bd5642b51958850e256c006cb17b2653d8b8bf9a4690b1dd0edf8dcee328fb65571a7f9baed05e089b8a956af4f73642b2cdb27dd8b72d237e41c6707cb7b61f0b37855c07ce554e4009692cceef7dc",
+        "storageFileName": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597/track_audio_file_99eae620-37fd-4d5c-8d59-2b8230283334.wav",
+        "originalFileName": "urlove MASTER 16:441.wav",
+        "fileSizeInBytes": 43703144,
+        "fileHash": "8722642640f1df6368824878d5184025",
+        "fileMime": "audio/wav",
+        "durationSeconds": 247,
+        "createdAt": "2023-03-05T23:41:15Z"
+      },
+      "copyright": {
+        "name": "munterfel.",
+        "year": 2023
+      },
+      "recordingRight": {
+        "name": "munterfel.",
+        "year": 2022
+      },
+      "originCountry": "DE",
+      "isrc": "DEYX82153014",
+      "language": "en",
+      "instrumental": false,
+      "explicit": false,
+      "liveRecording": false,
+      "trackStatus": "AVAILABLE",
+      "releaseIds": ["0bf582a8-8c30-4a6a-a73b-f37bb29f6dc7"],
+      "updatedAt": "2023-03-10T10:35:02Z",
+      "setNumber": 1,
+      "preListeningStart": 79,
+      "archived": false,
+      "workId": "b3e9578c-430a-4036-8c32-0695b24375d1",
+      "gemaWorkNumber": null,
+      "gemaWorkVersionNumber": null,
+      "userId": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+      "idea": null,
+      "createdAt": "2023-02-21T22:31:08Z"
+    }
+  ],
+  "meta": {
+    "page": 0,
+    "size": 10,
+    "total": 2
+  }
+}

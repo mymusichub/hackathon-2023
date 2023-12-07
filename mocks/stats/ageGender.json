@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "AgeGenderGroup": "GenderUnknown",
+      "Count": 210
+    },
+    {
+      "AgeGenderGroup": "AgeUnknown",
+      "Count": 210
+    },
+    {
+      "AgeGenderGroup": "AgeFemale0To17",
+      "Count": 2
+    },
+    {
+      "AgeGenderGroup": "AgeFemale18To22",
+      "Count": 230
+    },
+    {
+      "AgeGenderGroup": "AgeFemale23To27",
+      "Count": 1242
+    },
+    {
+      "AgeGenderGroup": "AgeFemale28To34",
+      "Count": 265
+    },
+    {
+      "AgeGenderGroup": "AgeFemale35To44",
+      "Count": 80
+    },
+    {
+      "AgeGenderGroup": "AgeFemale45To59",
+      "Count": 69
+    },
+    {
+      "AgeGenderGroup": "AgeFemaleGT59",
+      "Count": 6
+    },
+    {
+      "AgeGenderGroup": "AgeMale0To17",
+      "Count": 0
+    },
+    {
+      "AgeGenderGroup": "AgeMale18To22",
+      "Count": 530
+    },
+    {
+      "AgeGenderGroup": "AgeMale23To27",
+      "Count": 514
+    },
+    {
+      "AgeGenderGroup": "AgeMale28To34",
+      "Count": 241
+    },
+    {
+      "AgeGenderGroup": "AgeMale35To44",
+      "Count": 85
+    },
+    {
+      "AgeGenderGroup": "AgeMale45To59",
+      "Count": 59
+    },
+    {
+      "AgeGenderGroup": "AgeMaleGT59",
+      "Count": 53
+    },
+    {
+      "AgeGenderGroup": "TotalKnown",
+      "Count": 3376
+    }
+  ],
+  "TranslationMale": "Male",
+  "TranslationFemale": "Female",
+  "sources": {
+    "table": "streams",
+    "dsps": {
+      "applemusic": true,
+      "deezer": true,
+      "spotify": true,
+      "rhapsody": true,
+      "amazon": true
+    },
+    "startdate": "2023-03-20",
+    "enddate": "2023-12-05",
+    "prevstartdate": "2022-07-02",
+    "prevenddate": "2023-03-19"
+  }
+}

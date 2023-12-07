@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "DSP": "spotify",
+      "PlaylistID": "releaseRadar",
+      "PlaylistName": "",
+      "Count": 58,
+      "PlaylistURL": ""
+    },
+    {
+      "DSP": "spotify",
+      "PlaylistID": "onRepeat",
+      "PlaylistName": "",
+      "Count": 11,
+      "PlaylistURL": ""
+    },
+    {
+      "DSP": "spotify",
+      "PlaylistID": "yourTopSongs2023",
+      "PlaylistName": "",
+      "Count": 5,
+      "PlaylistURL": ""
+    },
+    {
+      "DSP": "spotify",
+      "PlaylistID": "yourDailyDrive",
+      "PlaylistName": "",
+      "Count": 3,
+      "PlaylistURL": ""
+    },
+    {
+      "DSP": "spotify",
+      "PlaylistID": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1",
+      "PlaylistName": "",
+      "Count": 2,
+      "PlaylistURL": "https://open.spotify.com/playlist/37i9dQZF1EP6YuccBxUcC1"
+    }
+  ],
+  "UnknownCount": 3502,
+  "UnknownPrevCount": 0,
+  "UnknownCountry": "Unknown",
+  "sources": {
+    "table": "streams",
+    "dsps": {
+      "applemusic": true,
+      "deezer": true,
+      "spotify": true,
+      "rhapsody": true,
+      "amazon": true
+    },
+    "startdate": "2023-03-20",
+    "enddate": "2023-12-05",
+    "prevstartdate": "2022-07-02",
+    "prevenddate": "2023-03-19"
+  }
+}

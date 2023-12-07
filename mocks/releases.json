@@ -1,0 +1,148 @@
+{
+  "releases": [
+    {
+      "userId": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+      "artist": "",
+      "title": "ILTHX [ilovetohavesex]",
+      "titleVersion": "",
+      "status": "LIVE",
+      "archived": false,
+      "upc": "4064946183070",
+      "resizedArtworkUrl": "https://storage.googleapis.com/release-artworks-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/resized/release_artwork_698fc65e-917a-4a99-9184-ff78dbc08835_360x360.jpg",
+      "createdAt": 1680890433000,
+      "updatedAt": 1681161910000,
+      "releaseDate": 1682035200000,
+      "submissionDate": 1680825600000,
+      "objectID": "14859f0c-4b6d-4a8d-8cb9-caac690415d5",
+      "_highlightResult": {
+        "userId": {
+          "value": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "artist": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "title": {
+          "value": "ILTHX [ilovetohavesex]",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "titleVersion": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "status": {
+          "value": "LIVE",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "upc": {
+          "value": "4064946183070",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "resizedArtworkUrl": {
+          "value": "https://storage.googleapis.com/release-artworks-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/resized/release_artwork_698fc65e-917a-4a99-9184-ff78dbc08835_360x360.jpg",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "createdAt": {
+          "value": "1680890433000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "updatedAt": {
+          "value": "1681161910000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "releaseDate": {
+          "value": "1682035200000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "submissionDate": {
+          "value": "1680825600000",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    },
+    {
+      "userId": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+      "artist": "",
+      "title": "Urlove.",
+      "titleVersion": "",
+      "status": "LIVE",
+      "archived": false,
+      "upc": "4064946169135",
+      "resizedArtworkUrl": "https://storage.googleapis.com/release-artworks-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/resized/release_artwork_f39dd0d4-832e-4628-a8a0-a0b9c76573f6_360x360.jpg",
+      "createdAt": 1677436609000,
+      "updatedAt": 1678259283000,
+      "releaseDate": 1679616000000,
+      "submissionDate": 1678060800000,
+      "objectID": "0bf582a8-8c30-4a6a-a73b-f37bb29f6dc7",
+      "_highlightResult": {
+        "userId": {
+          "value": "a431d5bb-c8b6-4212-a14f-dfe3fafdb597",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "artist": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "title": {
+          "value": "Urlove.",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "titleVersion": {
+          "value": "",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "status": {
+          "value": "LIVE",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "upc": {
+          "value": "4064946169135",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "resizedArtworkUrl": {
+          "value": "https://storage.googleapis.com/release-artworks-production/a431d5bb-c8b6-4212-a14f-dfe3fafdb597/resized/release_artwork_f39dd0d4-832e-4628-a8a0-a0b9c76573f6_360x360.jpg",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "createdAt": {
+          "value": "1677436609000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "updatedAt": {
+          "value": "1678259283000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "releaseDate": {
+          "value": "1679616000000",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "submissionDate": {
+          "value": "1678060800000",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      }
+    }
+  ]
+}

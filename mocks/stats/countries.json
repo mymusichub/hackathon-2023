@@ -1,0 +1,31 @@
+{
+  "data": [
+    { "Country": "DE", "Count": 3319 },
+    { "Country": "CZ", "Count": 64 },
+    { "Country": "AT", "Count": 48 },
+    { "Country": "CH", "Count": 24 },
+    { "Country": "US", "Count": 21 },
+    { "Country": "FR", "Count": 17 },
+    { "Country": "FI", "Count": 9 },
+    { "Country": "IT", "Count": 9 },
+    { "Country": "NL", "Count": 9 },
+    { "Country": "ES", "Count": 8 }
+  ],
+  "UnknownCount": 0,
+  "UnknownPrevCount": 0,
+  "UnknownCountry": "Unknown",
+  "sources": {
+    "table": "streams",
+    "dsps": {
+      "applemusic": true,
+      "deezer": true,
+      "spotify": true,
+      "rhapsody": true,
+      "amazon": true
+    },
+    "startdate": "2023-03-20",
+    "enddate": "2023-12-05",
+    "prevstartdate": "2022-07-02",
+    "prevenddate": "2023-03-19"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "EAN": "4064946169135",
+      "AlbumTitle": "Urlove.",
+      "AlbumVersion": null,
+      "AlbumArtist": "munterfel.",
+      "Count": 2417
+    },
+    {
+      "EAN": "4064946183070",
+      "AlbumTitle": "ILTHX [ilovetohavesex]",
+      "AlbumVersion": null,
+      "AlbumArtist": "munterfel.",
+      "Count": 1169
+    }
+  ],
+  "sources": {
+    "table": "streams",
+    "dsps": {
+      "applemusic": true,
+      "deezer": true,
+      "spotify": true,
+      "rhapsody": true,
+      "amazon": true
+    },
+    "startdate": "2023-03-20",
+    "enddate": "2023-12-05",
+    "prevstartdate": "2022-07-02",
+    "prevenddate": "2023-03-19"
+  }
+}
