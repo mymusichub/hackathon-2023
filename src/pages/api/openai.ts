@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const chatCompletionService = async (req: any, res: any) => {
