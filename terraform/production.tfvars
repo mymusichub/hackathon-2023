@@ -1,9 +1,0 @@
-GOOGLE_PROJECT_ID = "musichub-production-278316"
-GOOGLE_COMPUTE_REGION = "europe-west3"
-
-AUTOSCALE_TARGET_CPU_UTILIZATION = 60
-AUTOSCALE_MIN_REPLICAS = 2
-AUTOSCALE_MAX_REPLICAS = 10
-
-ENVIRONMENT = "production"
-API_URL="https://mh-api.music-hub.com/"
