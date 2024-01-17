@@ -12,6 +12,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  padding: 100px;
 }
 
 img,
@@ -43,7 +44,7 @@ h6 {
 /* Globals */
 body {
   margin: 0px;
-  background: #635c7e;
+  background: #f5f3fd;
 }
 
 .mb-3 {
